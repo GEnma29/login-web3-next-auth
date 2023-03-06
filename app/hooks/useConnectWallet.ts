@@ -19,6 +19,7 @@ const useConnectWallet = () => {
       const callbackUrl = "/home";
       const message = new SiweMessage({
         domain: window.location.host,
+        // eslint-disable-next-line object-shorthand
         address,
         statement: "Sign in with Ethereum to the app.",
         uri: window.location.origin,

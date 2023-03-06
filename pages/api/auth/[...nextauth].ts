@@ -67,6 +67,10 @@ export default async function auth(req: any, res: any) {
       async session({ session, token }: { session: any; token: any }) {
         // eslint-disable-next-line no-param-reassign
         session.address = token.sub;
+        // eslint-disable-next-line no-param-reassign
+        session.user.name = token.sub;
+        // eslint-disable-next-line no-param-reassign
+        session.user.image = "https://www.fillmurray.com/128/128";
         return session;
       },
     },

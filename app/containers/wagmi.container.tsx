@@ -5,7 +5,7 @@ import { publicProvider } from "wagmi/providers/public";
 
 // Config
 // ========================================================
-const { provider, webSocketProvider } = configureChains(
+const { provider } = configureChains(
   [mainnet, bsc, polygon],
   [publicProvider()]
 );
@@ -13,7 +13,6 @@ const { provider, webSocketProvider } = configureChains(
 const client = createClient({
   autoConnect: true,
   provider,
-  webSocketProvider,
 });
 
 // Provider
