@@ -46,8 +46,7 @@
   "lint-staged": {
     "*.(ts|tsx)": [
       "eslint --fix",
-      "yarn format",
-      "yarn test"
+      "yarn format"
     ]
   }
 }
