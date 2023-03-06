@@ -6,7 +6,10 @@
     "sourceType": "module"
   },
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx",".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "import/extensions": [
@@ -18,12 +21,12 @@
         "ts": "never",
         "tsx": "never"
       }
-   ],
-   "react/function-component-definition": [
-    2,
-    {
-      "namedComponents": "function-declaration"
-    }
-  ]
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "function-declaration"
+      }
+    ]
   }
 }
