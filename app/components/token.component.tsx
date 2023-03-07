@@ -8,5 +8,5 @@ export default function Token() {
 
   if (isLoading) return <div>Fetching token…</div>;
   if (isError) return <div>Error fetching token</div>;
-  return <div>Token: {data?.symbol}</div>;
+  return <div>Token: {JSON.stringify(data)}</div>;
 }

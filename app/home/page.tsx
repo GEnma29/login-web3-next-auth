@@ -1,16 +1,20 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import HeaderWallet from "../components/header-wallet.component";
-import ClientOnly from "../containers/client-only";
+import Token from "../components/token.component";
+import CommonLayout from "../components/common-layout.component";
 
 function Home() {
   return (
-    <div className="flex w-screen h-screen justify-center align-center ">
-      <ClientOnly>
-        <HeaderWallet />
-      </ClientOnly>
-    </div>
+    <CommonLayout title="Create your NFT">
+      <HeaderWallet />
+      <Token />
+      <li>
+        <Link href="/wallet">wallet</Link>
+      </li>
+    </CommonLayout>
   );
 }
 

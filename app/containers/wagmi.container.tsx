@@ -1,17 +1,19 @@
 import React from "react";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
-import { mainnet, bsc, polygon } from "wagmi/chains";
+import { mainnet, bsc, polygon, bscTestnet, goerli } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
+import { InjectedConnector } from "wagmi/connectors/injected";
 
 // Config
 // ========================================================
-const { provider } = configureChains(
-  [mainnet, bsc, polygon],
+const { chains, provider } = configureChains(
+  [mainnet, bsc, polygon, bscTestnet, goerli],
   [publicProvider()]
 );
 
 const client = createClient({
   autoConnect: true,
+  connectors: [new InjectedConnector({ chains })],
   provider,
 });
 
